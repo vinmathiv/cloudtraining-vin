@@ -1,0 +1,17 @@
+clusters:
+- cluster:
+    certificate-authority: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    server: https://172.30.0.1:443
+  name: https://172.30.0.1:443
+contexts:
+- context:
+    cluster: https://172.30.0.1:443
+    namespace: manoj2-dev
+    user: manoj2
+  name: manoj2-context
+current-context: manoj2-context
+kind: Config
+users:
+- name: manoj2
+  user:
+    token: sha256~YghkXITsacCePtj_TzOc7pc-VGUM6D88__3Q3lb9k-U
