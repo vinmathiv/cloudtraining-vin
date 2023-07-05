@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-manoj
+spec:
+  selector:
+    matchLabels:
+      app: hello-manoj
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: hello-manoj
+    spec:
+      containers:
+      - name: hello-manoj
+        image: image-registry.openshift-image-registry.svc:5000/manoj2-dev/hello-manoj:latest
+        ports:
+        - containerPort: 8080
